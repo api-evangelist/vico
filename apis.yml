@@ -1,7 +1,12 @@
 aid: vico
 name: Vico
-description: Vico is a company surfaced as a portfolio company of 500-global and added to the API Evangelist
-  network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  Vico (getvico.com) is a Colombian marketplace for finding and renting furnished rooms,
+  aparta-estudios, and apartments for shared, medium- to long-term stays across cities such
+  as Bogotá and Medellín. Guests browse and book verified co-living spaces while hosts list
+  and manage rooms, under the tagline "Ama donde vives" (Love where you live). It is a
+  consumer-facing accommodation platform backed by 500 Global; it exposes no public developer
+  API program, OpenAPI, GraphQL, or /.well-known discovery surface as of this enrichment pass.
 url: https://raw.githubusercontent.com/api-evangelist/vico/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -9,11 +14,30 @@ x-backed-by:
 - 500-global
 x-tier: stub
 x-tier-reason: portfolio-lead
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://api.getvico.com/images/opengraph/facebook_opengraph_vicorooms.jpg
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
 tags:
 - Company
+- Real Estate
+- Rentals
+- Housing
+- Marketplace
+- Co-Living
+- Colombia
+- Travel
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -23,3 +47,22 @@ maintainers:
 common:
 - type: Website
   url: https://getvico.com
+- type: About
+  url: https://getvico.com/about-us
+- type: Blog
+  url: https://getvico.com/blog
+- type: Support
+  url: https://getvico.com/help
+- type: TermsOfService
+  url: https://getvico.com/terminos-y-condiciones/latest
+- type: PrivacyPolicy
+  url: https://getvico.com/terminos-y-condiciones/latest
+- type: LinkedIn
+  url: https://www.linkedin.com/company/vicorooms/
+- type: DomainSecurity
+  url: security/vico-domain-security.yml
+x-enrichment:
+  date: '2026-07-21'
+  status: minimal
+  artifacts_added: 1
+  pass: local-v1
