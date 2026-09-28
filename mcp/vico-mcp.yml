@@ -16,8 +16,10 @@ deployment:
 tools_count: 2
 tools:
 - name: search
-  description: ''
+  description: Search Vico's listings by a free-text place description.
 - name: fetch
-  description: ''
+  description: Fetch the full detail for one Vico listing by id.
 tools_source: live tools/list via initialize handshake, 2026-09-12 (signals/audit_mcp_authorship.py --probe)
 authorship: provider
+descriptions_source: live tools/list (authorship probe or saved capture); filled by backfill-tools-from-authorship.py
+  --descriptions, 2026-09-28
