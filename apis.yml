@@ -42,7 +42,7 @@ created: '2026-07-17'
 modified: '2026-07-21'
 tags:
 - Company
-- Real-Estate
+- Real Estate
 - Rentals
 - Housing
 - Marketplace
@@ -58,6 +58,7 @@ tags_raw:
 - Co-Living
 - Colombia
 - Travel
+- Real-Estate
 apis: []
 maintainers:
 - FN: Kin Lane
