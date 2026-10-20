@@ -1,0 +1,123 @@
+{
+  "endpoint": "https://api.getvico.com/mcp",
+  "captured": "2026-10-20",
+  "method": "initialize + tools/list (anonymous, no tool called; roadmap#992)",
+  "protocol_version": "2025-06-18",
+  "server_info": {
+    "name": "vico",
+    "version": "1.28.1"
+  },
+  "result": {
+    "tools": [
+      {
+        "name": "search",
+        "description": "Search Vico's listings by a free-text place description.",
+        "inputSchema": {
+          "properties": {
+            "query": {
+              "title": "Query",
+              "type": "string"
+            }
+          },
+          "required": [
+            "query"
+          ],
+          "title": "searchArguments",
+          "type": "object"
+        },
+        "outputSchema": {
+          "$defs": {
+            "SearchResultItem": {
+              "properties": {
+                "id": {
+                  "title": "Id",
+                  "type": "string"
+                },
+                "title": {
+                  "title": "Title",
+                  "type": "string"
+                },
+                "url": {
+                  "title": "Url",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "title",
+                "url"
+              ],
+              "title": "SearchResultItem",
+              "type": "object"
+            }
+          },
+          "properties": {
+            "results": {
+              "items": {
+                "$ref": "#/$defs/SearchResultItem"
+              },
+              "title": "Results",
+              "type": "array"
+            }
+          },
+          "required": [
+            "results"
+          ],
+          "title": "SearchResponse",
+          "type": "object"
+        }
+      },
+      {
+        "name": "fetch",
+        "description": "Fetch the full detail for one Vico listing by id.",
+        "inputSchema": {
+          "properties": {
+            "id": {
+              "title": "Id",
+              "type": "string"
+            }
+          },
+          "required": [
+            "id"
+          ],
+          "title": "fetchArguments",
+          "type": "object"
+        },
+        "outputSchema": {
+          "properties": {
+            "id": {
+              "title": "Id",
+              "type": "string"
+            },
+            "title": {
+              "title": "Title",
+              "type": "string"
+            },
+            "text": {
+              "title": "Text",
+              "type": "string"
+            },
+            "url": {
+              "title": "Url",
+              "type": "string"
+            },
+            "metadata": {
+              "additionalProperties": true,
+              "title": "Metadata",
+              "type": "object"
+            }
+          },
+          "required": [
+            "id",
+            "title",
+            "text",
+            "url",
+            "metadata"
+          ],
+          "title": "FetchResult",
+          "type": "object"
+        }
+      }
+    ]
+  }
+}
